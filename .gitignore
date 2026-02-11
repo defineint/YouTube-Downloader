@@ -1,0 +1,9 @@
+build/
+dist/
+pyin.txt
+*.spec
+icon.ico
+
+__pycache__/
+
+36ef265f-*
