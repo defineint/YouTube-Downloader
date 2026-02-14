@@ -18,6 +18,8 @@ $denoPath = "$HOME\.deno\bin"
 yt-dlp --remote-components ejs:github --update
 ```
 
+完成環境部屬後，執行 `main.py` 即可使用
+
 ## 使用執行檔
 
 在本地新建資料夾並關閉該資料夾的防毒偵測，避免執行檔被防毒刪除，請用 `PowerShell` 並以**管理員權限**執行以下指令  
