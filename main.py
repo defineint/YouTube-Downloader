@@ -13,6 +13,9 @@ class App(customtkinter.CTk):
 
         self.task_count = 0
         self.active_tasks = set()
+        self.headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36"
+        }
         self.download_path = os.path.join(os.path.expanduser("~"), "Desktop", "YouTube_Downloads")
         if not os.path.exists(self.download_path):
             os.makedirs(self.download_path)
@@ -125,7 +128,9 @@ class App(customtkinter.CTk):
             ydl_opts = {
                 'js_runtime': 'deno',
                 'remote_components': ['ejs:github'],
-                'user_agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Mobile/15E148 Safari/604.1',
+                'sleep_interval': 3, 
+                'max_sleep_interval': 5,
+                'user_agent': '"User-Agent":Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36',
                 'format': 'bestvideo[vcodec^=avc]+bestaudio[acodec^=mp4a]/best[ext=mp4]/best',
                 'noplaylist': True,
                 'merge_output_format': 'mp4',
@@ -145,7 +150,7 @@ class App(customtkinter.CTk):
                     pict_url = info.get('thumbnail')
                     if pict_url:
                         try:
-                            response = requests.get(pict_url, stream=True)
+                            response = requests.get(pict_url, stream=True, headers=self.headers)
                             img_data = Image.open(BytesIO(response.content))
                             ctk_img = customtkinter.CTkImage(light_image=img_data, dark_image=img_data, size=(160, 90))
                             self.after(0, lambda: img_lbl.configure(image=ctk_img, text=""))
