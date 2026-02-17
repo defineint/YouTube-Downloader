@@ -3,6 +3,7 @@ dist/
 pyin.txt
 *.spec
 icon.ico
+pre_main.py
 
 __pycache__/
 
