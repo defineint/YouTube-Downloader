@@ -23,7 +23,8 @@ yt-dlp --remote-components ejs:github --update
 ## 使用執行檔
 
 在本地新建資料夾並關閉該資料夾的防毒偵測，避免執行檔被防毒刪除，請用 `PowerShell` 並以**管理員權限**執行以下指令  
-資料夾關閉防毒後請自行注意安全性
+>[!CAUTION]
+>資料夾關閉防毒後請自行注意安全性，且本方法僅用在處理 `Windows Defender`，其他防毒軟體請自行處理
 ```PowerShell
 # 選擇資料夾名稱跟路徑
 $fullPath = "填入資料夾路徑 (EX: C:\Users\Deskop\newfolder)"
