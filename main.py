@@ -218,7 +218,9 @@ class App(customtkinter.CTk):
                     'nocolor': True,
                     'sleep_interval': 3, 
                     'max_sleep_interval': 5,
-                    'user_agent': self.headers['User-Agent']
+                    'user_agent': self.headers['User-Agent'],
+                    'js_runtime': 'deno',
+                    'remote_components': ['ejs:github'],
                 }
 
                 if selected_res == "Audio Only":
