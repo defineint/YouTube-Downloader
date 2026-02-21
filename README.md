@@ -18,7 +18,15 @@ $denoPath = "$HOME\.deno\bin"
 yt-dlp --remote-components ejs:github --update
 ```
 
-完成環境部屬後，執行 `main.py` 即可使用
+本專案需要 `FFmpeg` 來處理影片與音訊的合併（若未安裝，將無法下載高畫質影片）：
+1. 前往官網下載 [FFmpeg 執行檔](https://www.gyan.dev/ffmpeg/builds/)
+2. 解壓縮後，將 `bin` 資料夾內的 `ffmpeg.exe` 路徑加入系統的 **環境變數 (Path)** 中
+3. 在終端機輸入 `ffmpeg -version` 確認是否安裝成功
+
+> **題外話：** 如果你懶得設定環境變數，也可以直接將 `ffmpeg.exe` 、 `ffplay.exe` 放在 `main.py` 的同一個資料夾下
+
+
+環境完成後，執行 `main.py` 即可使用
 
 ## 使用 Setup.exe 安裝
 
