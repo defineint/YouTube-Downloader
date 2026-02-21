@@ -4,6 +4,8 @@ pyin.txt
 *.spec
 icon.ico
 pre_main.py
+YTDL.iss
+tmp.md
 
 __pycache__/
 
