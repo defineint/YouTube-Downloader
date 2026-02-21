@@ -20,26 +20,13 @@ yt-dlp --remote-components ejs:github --update
 
 完成環境部屬後，執行 `main.py` 即可使用
 
-## 使用執行檔
+## 使用 Setup.exe 安裝
 
-在本地新建資料夾並關閉該資料夾的防毒偵測，避免執行檔被防毒刪除，請用 `PowerShell` 並以**管理員權限**執行以下指令  
->[!CAUTION]
->資料夾關閉防毒後請自行注意安全性，且本方法僅用在處理 `Windows Defender`，其他防毒軟體請自行處理
-```PowerShell
-# 選擇資料夾名稱跟路徑
-$fullPath = "填入資料夾路徑 (EX: C:\Users\Deskop\newfolder)"
+您可以前往 [Releases 頁面](https://github.com/defineint/YouTube-Downloader/releases) 下載最新版本
 
-# 建立資料夾
-New-Item -Path $fullPath -ItemType Directory
-
-# 將路徑加入 Windows Defender 的排除清單
-Add-MpPreference -ExclusionPath $fullPath
-
-# 查詢目前的排除路徑清單(檢測用)
-(Get-MpPreference).ExclusionPath
-```
-
-下載 `YTDL.zip` 檔案 **(解壓碼：1234)**: [https://drive.google.com/file/d/1v9HUMseM3FLT7CSrrNp-COxsb7nkS8Au/view?usp=sharing](https://drive.google.com/file/d/1v9HUMseM3FLT7CSrrNp-COxsb7nkS8Au/view?usp=sharing)  
-將壓縮檔解壓到剛剛建立的資料夾中，以管理員權限執行 `Yt_Downloader.exe` 即可使用
+> **安裝說明：**
+> 1. 下載 `YouTubeDownloader_Setup.exe`
+> 2. 執行安裝程式（若 Windows 彈出保護視窗，請點擊「詳細資訊」並選擇「仍要執行」）
+> 3. 安裝完成後，即可從桌面捷徑啟動程式
 
 
