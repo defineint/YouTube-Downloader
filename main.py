@@ -219,7 +219,7 @@ class App(customtkinter.CTk):
                     'sleep_interval': 3, 
                     'max_sleep_interval': 5,
                     'user_agent': self.headers['User-Agent'],
-                    'js_runtime': 'deno',
+                    'js_runtimes': {'deno': {}}, 
                     'remote_components': ['ejs:github'],
                 }
 

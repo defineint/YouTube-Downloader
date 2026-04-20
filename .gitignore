@@ -3,7 +3,8 @@ dist/
 pyin.txt
 *.spec
 icon.ico
-pre_main.py
+pre_pack/
+needed files/
 YTDL.iss
 tmp.md
 
