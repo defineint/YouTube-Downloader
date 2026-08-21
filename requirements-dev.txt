@@ -1,0 +1,8 @@
+# 打包成 exe 時才需要的工具，單純執行 main.py 不用裝
+#
+# 安裝：python -m pip install -r requirements-dev.txt
+
+-r requirements.txt
+
+# altgraph、pefile、pyinstaller-hooks-contrib、pywin32-ctypes 會被一起帶進來
+pyinstaller>=6.18.0

@@ -1,7 +1,18 @@
 # YouTube-Downloader
 **本專案僅能在 `windows` 環境下使用**
 ## 本地端部屬
-python套件要求請使用 `requirements.txt`    
+python 套件請使用 `requirements.txt` 安裝：
+
+```PowerShell
+python -m pip install -r requirements.txt
+```
+
+> 若你要自行打包成 exe，改用 `requirements-dev.txt`（會一併裝上 PyInstaller）
+
+>[!IMPORTANT]
+>YouTube 會不定期更換防護機制，**過舊的 yt-dlp 會直接下載失敗 (HTTP 403)**。
+>遇到下載不了時，請先更新再說：`python -m pip install -U yt-dlp`
+
 本專案使用 yt-dlp 進行下載，為確保能順利解析 YouTube 高畫質影片 (解決 JS challenge)，請安裝 `Denoe` 並下載 `yt-dlp` 需要的破解腳本
 
 ```PowerShell
